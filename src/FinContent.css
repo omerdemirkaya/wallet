@@ -1,0 +1,151 @@
+/* Tüm elementlerin box-sizing özelliğini border-box olarak ayarlamak */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML ve body için sıfırlama */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.fin-container {
+  display: flex;
+  flex-direction: row; /* Yatayda hizalama */
+  height: 100vh; /* Tam ekran yüksekliği */
+  flex-wrap: nowrap; /* Küçük ekranlarda satırları sarmala */
+}
+
+.fin-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.left-section, .right-section {
+  width: 25%;
+  background-color: #f9f9f9; /* Açık gri arka plan */
+  border-right: 1px solid #ddd; /* Sağ kenar çizgisi */
+  overflow-y: auto; /* İçerik taşmasını önlemek için */
+  padding-bottom: 1rem; /* İçeriğin altına boşluk ekle */
+}
+
+.center-section {
+  width: 50%;
+  background-color: #fff; /* Beyaz arka plan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* İçeriğin etrafına boşluk ekle */
+}
+
+/* Başlık stili */
+.section-header {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Input alanları ve butonlar */
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.select-category {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.item-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive tasarım için medya sorguları */
+@media (max-width: 1200px) {
+  .left-section, .right-section {
+    width: 30%; /* Orta boyutlu ekranlarda genişliği %30 yap */
+    border-right: none; /* Sağ kenar çizgisini kaldır */
+    border-bottom: 1px solid #ddd; /* Alt kenar çizgisi ekle */
+  }
+
+  .center-section {
+    width: 40%; /* Orta boyutlu ekranlarda genişliği %40 yap */
+    margin-top: 1rem; /* Yukarıdan boşluk ekle */
+  }
+}
+
+@media (max-width: 768px) {
+  .fin-container {
+    flex-direction: column; /* Küçük ekranlarda dikey hizalama */
+    height: auto; /* Yüksekliği otomatik yap */
+  }
+
+  .left-section, .right-section, .center-section {
+    width: 100%; /* Küçük ekranlarda genişliği %100 yap */
+    border-right: none; /* Sağ kenar çizgisini kaldır */
+    border-bottom: none; /* Alt kenar çizgisini kaldır */
+  }
+
+  .center-section {
+    margin-top: 1rem; /* Orta kısımda yukarıdan boşluk ekle */
+  }
+
+  /* Küçük ekranlarda içerik arası boşlukları azalt */
+  .left-section, .right-section {
+    padding-bottom: 0.5rem; /* Alt padding'i azalt */
+  }
+}
+/* Bakiye bölümü için stil */
+.balance {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+  }
+  

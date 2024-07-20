@@ -1,0 +1,147 @@
+/* Tüm elementlerin box-sizing özelliğini border-box olarak ayarlamak */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML ve body için sıfırlama */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(76, 179, 226, 0.5), rgba(170, 216, 238, 0.5));
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 6rem;
+  font-size: 3rem; /* Daha uygun bir font boyutu */
+  font-family: "Poppins", monospace;
+  background-color: rgba(255, 255, 255, 0.9); /* Hafif arka plan rengi */
+  border-bottom: 2px solid black; /* Başlık altına ince bir çizgi */
+}
+
+.content-body {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Dikey hizalama */
+}
+
+.enter-birim {
+  width: 30%;
+  height: 40vh;
+  border: 1px solid #ccc; /* Daha hafif bir sınır rengi */
+  border-radius: 8px; /* Köşeleri yuvarlatma */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* Arka plan rengini beyaz */
+  margin: 1rem; /* Kenar boşlukları ekleyin */
+}
+
+.enter-birim-header {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem; /* Daha uygun bir font boyutu */
+  color: #333; /* Daha koyu bir yazı rengi */
+}
+
+.enter-birim-body {
+  width: 100%;
+  height: 70%; /* İçerik yüksekliğini ayarlama */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-para-birimi {
+  width: 80%;
+  height: 2.5rem; /* Yüksekliği artırarak daha rahat seçim */
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: "Poppins", monospace;
+  border: 1px solid #ccc; /* Hafif sınır rengi */
+  border-radius: 4px; /* Köşeleri yuvarlatma */
+  background-color: #f9f9f9; /* Arka plan rengini açık gri */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Geçiş efektleri */
+}
+
+.select-para-birimi:focus {
+  border-color: #007bff; /* Focus durumunda mavi sınır rengi */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Focus durumunda gölge efekti */
+}
+
+.devam-butonu {
+  width: 80%;
+  height: 3rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: "Poppins", monospace;
+  color: #fff;
+  background-color: #007bff; /* Buton rengi */
+  border: none;
+  border-radius: 4px; /* Köşeleri yuvarlatma */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Geçiş efektleri */
+}
+
+.devam-butonu:hover {
+  background-color: #0056b3; /* Hover durumunda daha koyu mavi */
+}
+
+.devam-butonu:active {
+  background-color: #004494; /* Tıklama durumunda koyu mavi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Tıklama efektleri */
+}
+
+/* Responsive tasarım için medya sorguları */
+@media (max-width: 1200px) {
+  .header {
+    font-size: 2.5rem; /* Orta boyutlu ekranlarda font boyutunu küçült */
+    letter-spacing: 3rem; /* Harf aralığını küçült */
+  }
+
+  .enter-birim {
+    width: 50%; /* Orta boyutlu ekranlarda genişliği %50 yap */
+    height: auto; /* Yüksekliği otomatik yap */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 2rem; /* Küçük ekranlarda font boyutunu daha da küçült */
+    letter-spacing: 2rem; /* Harf aralığını daha da küçült */
+  }
+
+  .enter-birim {
+    width: 80%; /* Küçük ekranlarda genişliği %80 yap */
+    height: auto; /* Yüksekliği otomatik yap */
+    margin: 0.5rem; /* Kenar boşluklarını küçült */
+  }
+}
