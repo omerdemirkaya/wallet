@@ -132,7 +132,8 @@ html, body {
   }
 
   .center-section {
-    margin-top: 1rem; /* Orta kısımda yukarıdan boşluk ekle */
+    margin-top: 0px; /* Orta kısımda yukarıdan boşluk ekle */
+    border: 1px solid black;
   }
 
   /* Küçük ekranlarda içerik arası boşlukları azalt */
